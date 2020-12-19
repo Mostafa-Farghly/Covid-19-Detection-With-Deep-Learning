@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0114)file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head><meta charset="utf-8" />
 
 <title>Covid-19 Detection With Deep Learning</title>
 
-<script src="./Covid-19 Detection With Deep Learning_files/require.min.js.download"></script>
-<script src="./Covid-19 Detection With Deep Learning_files/jquery.min.js.download"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
 
@@ -13046,13 +13046,13 @@ div#notebook {
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/custom.css">
+<link rel="stylesheet" href="custom.css">
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="./Covid-19 Detection With Deep Learning_files/latest.js.download"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config;executed=true">
+    <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -13069,111 +13069,16 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --><script type="text/javascript" async="" src="./Covid-19 Detection With Deep Learning_files/MathJax.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
-.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
-.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
-.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
-</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_About.MathJax_MousePost {outline: none}
-.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-.MathJax_MenuItem {padding: 2px 2em; background: transparent}
-.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
-.MathJax_MenuActive .MathJax_MenuArrow {color: white}
-.MathJax_MenuArrow.RTL {left: .5em; right: auto}
-.MathJax_MenuCheck {position: absolute; left: .7em}
-.MathJax_MenuCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuRadioCheck {position: absolute; left: 1em}
-.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
-.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
-.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
-.MathJax_MenuDisabled {color: GrayText}
-.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
-.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
-.MathJax_ContextMenu:focus {outline: none}
-.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
-#MathJax_AboutClose {top: .2em; right: .2em}
-.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
-.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
-.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
-.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_MenuClose:hover span {background-color: #CCC!important}
-.MathJax_MenuClose:hover:focus {outline: none}
-</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
-</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
-.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
-</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
-#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-</style><style type="text/css">.MathJax_Preview {color: #888}
-#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
-#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
-.MathJax_Error {color: #CC0000; font-style: italic}
-</style><style type="text/css">.MJXp-script {font-size: .8em}
-.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
-.MJXp-bold {font-weight: bold}
-.MJXp-italic {font-style: italic}
-.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-largeop {font-size: 150%}
-.MJXp-largeop.MJXp-int {vertical-align: -.2em}
-.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
-.MJXp-display {display: block; text-align: center; margin: 1em 0}
-.MJXp-math span {display: inline-block}
-.MJXp-box {display: block!important; text-align: center}
-.MJXp-box:after {content: " "}
-.MJXp-rule {display: block!important; margin-top: .1em}
-.MJXp-char {display: block!important}
-.MJXp-mo {margin: 0 .15em}
-.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
-.MJXp-denom {display: inline-table!important; width: 100%}
-.MJXp-denom > * {display: table-row!important}
-.MJXp-surd {vertical-align: top}
-.MJXp-surd > * {display: block!important}
-.MJXp-script-box > *  {display: table!important; height: 50%}
-.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
-.MJXp-script-box > *:last-child > * {vertical-align: bottom}
-.MJXp-script-box > * > * > * {display: block!important}
-.MJXp-mphantom {visibility: hidden}
-.MJXp-munderover, .MJXp-munder {display: inline-table!important}
-.MJXp-over {display: inline-block!important; text-align: center}
-.MJXp-over > * {display: block!important}
-.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
-.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
-.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
-.MJXp-mtr {display: table-row!important}
-.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
-.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
-.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
-.MJXp-mlabeledtr {display: table-row!important}
-.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
-.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
-.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
-.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
-.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
-.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
-.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
-.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
-.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
-.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
-.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
-.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
-.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
-.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
-</style></head>
-<body style=""><div id="MathJax_Message" style="display: none;"></div>
+    <!-- End of mathjax configuration --></head>
+<body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3><font color="green">By:</font><font color="#296EAA"> Mostafa Alaa Abd-Elaal Farghly</font></h3>
-<h3><font color="green">Project Repository:</font> <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning</a></h3>
+<h3><font color=green>By:</font><font color=#296EAA> Mostafa Alaa Abd-Elaal Farghly</font></h3>
+<h3><font color=green>Project Repository:</font> <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning</a></h3>
 <hr>
 
 </div>
@@ -13182,8 +13087,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Results-of-AlexNet,-Resnet50,-and-Resnet101-CNN-in-Detecting-Covid-19-Using-CT-and-X-ray-Images">Results of AlexNet, Resnet50, and Resnet101 CNN in Detecting Covid-19 Using CT and X-ray Images<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Results-of-AlexNet,-Resnet50,-and-Resnet101-CNN-in-Detecting-Covid-19-Using-CT-and-X-ray-Images">¶</a></h1><hr>
-
+<h1 id="Results-of-AlexNet,-Resnet50,-and-Resnet101-CNN-in-Detecting-Covid-19-Using-CT-and-X-ray-Images">Results of AlexNet, Resnet50, and Resnet101 CNN in Detecting Covid-19 Using CT and X-ray Images<a class="anchor-link" href="#Results-of-AlexNet,-Resnet50,-and-Resnet101-CNN-in-Detecting-Covid-19-Using-CT-and-X-ray-Images">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13199,7 +13103,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <table>
-  <tbody><tr>
+  <tr>
       <th><center>Number</center></th>
     <th><center>Dataset's link</center></th>
       <th><center>Modality</center></th>
@@ -13234,7 +13138,7 @@ div#notebook {
     <td><center>284</center></td>
   </tr>
 
-</tbody></table>
+</table>
 </div>
 </div>
 </div>
@@ -13249,7 +13153,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
+<h2 id="Models-and-Results">Models and Results<a class="anchor-link" href="#Models-and-Results">&#182;</a></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this section, the standard model's results against the different datasets will be shown along with the results of the same model after customization if any were made.</p>
 
 </div>
 </div>
@@ -13257,7 +13161,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Models-and-Results">Models and Results<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Models-and-Results">¶</a></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this section, the standard model's results against the different datasets will be shown along with the results of the same model after customization if any were made.</p>
+<h3 id="1.-AlexNet">1. AlexNet<a class="anchor-link" href="#1.-AlexNet">&#182;</a></h3><p>In this model we used "Adam Optimizer", and used each of the four datasets separately to train and test the model.</p>
+<h5 id="Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet.ipynb">Model Training Code: <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet.ipynb">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet.ipynb</a><a class="anchor-link" href="#Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet.ipynb">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="AlexNet.png" alt="image" title="AlexNet consists of 5 Convolutional Layers and 3 Fully Connected Layers"></p>
 
 </div>
 </div>
@@ -13265,30 +13177,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.-AlexNet">1. AlexNet<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#1.-AlexNet">¶</a></h3><p>In this model we used "Adam Optimizer", and used each of the four datasets separately to train and test the model.</p>
-<h5 id="Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet.ipynb">Model Training Code: <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet.ipynb">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet.ipynb</a><a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet.ipynb">¶</a></h5>
+<h4 id="1.1.-The-Standard-AlexNet-Model-With-Dataset-1">1.1. The Standard AlexNet Model With Dataset 1<a class="anchor-link" href="#1.1.-The-Standard-AlexNet-Model-With-Dataset-1">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet.png" alt="image" title="AlexNet consists of 5 Convolutional Layers and 3 Fully Connected Layers"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1.1.-The-Standard-AlexNet-Model-With-Dataset-1">1.1. The Standard AlexNet Model With Dataset 1<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#1.1.-The-Standard-AlexNet-Model-With-Dataset-1">¶</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet_ds_1.png" alt="image"></p>
+<p><img src="./AlexNet/AlexNet_ds_1.png" alt="image"></p>
 
 </div>
 </div>
@@ -13308,14 +13204,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1.2.-The-Standard-AlexNet-Model-With-Dataset-2">1.2. The Standard AlexNet Model With Dataset 2<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#1.2.-The-Standard-AlexNet-Model-With-Dataset-2">¶</a></h4>
+<h4 id="1.2.-The-Standard-AlexNet-Model-With-Dataset-2">1.2. The Standard AlexNet Model With Dataset 2<a class="anchor-link" href="#1.2.-The-Standard-AlexNet-Model-With-Dataset-2">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet_ds_2.png" alt="image"></p>
+<p><img src="./AlexNet/AlexNet_ds_2.png" alt="image"></p>
 
 </div>
 </div>
@@ -13335,14 +13231,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1.3.-The-Standard-AlexNet-Model-With-Dataset-3">1.3. The Standard AlexNet Model With Dataset 3<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#1.3.-The-Standard-AlexNet-Model-With-Dataset-3">¶</a></h4>
+<h4 id="1.3.-The-Standard-AlexNet-Model-With-Dataset-3">1.3. The Standard AlexNet Model With Dataset 3<a class="anchor-link" href="#1.3.-The-Standard-AlexNet-Model-With-Dataset-3">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet_ds_3.png" alt="image"></p>
+<p><img src="./AlexNet/AlexNet_ds_3.png" alt="image"></p>
 
 </div>
 </div>
@@ -13362,7 +13258,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1.4.-The-Standard-AlexNet-Model-With-Dataset-4">1.4. The Standard AlexNet Model With Dataset 4<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#1.4.-The-Standard-AlexNet-Model-With-Dataset-4">¶</a></h4><p>With this dataset, data augmentation was used.</p>
+<h4 id="1.4.-The-Standard-AlexNet-Model-With-Dataset-4">1.4. The Standard AlexNet Model With Dataset 4<a class="anchor-link" href="#1.4.-The-Standard-AlexNet-Model-With-Dataset-4">&#182;</a></h4><p>With this dataset, data augmentation was used.</p>
 
 </div>
 </div>
@@ -13370,7 +13266,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet_ds_4.png" alt="image"></p>
+<p><img src="./AlexNet/AlexNet_ds_4.png" alt="image"></p>
 
 </div>
 </div>
@@ -13389,8 +13285,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="observation:">observation:<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#observation:">¶</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AlexNet's model with "Adam" optimizer has showed quite poor results with all the datasets.</p>
-<hr>
+<h3 id="observation:">observation:<a class="anchor-link" href="#observation:">&#182;</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AlexNet's model with "Adam" optimizer has showed quite poor results with all the datasets.</p>
 
 </div>
 </div>
@@ -13398,22 +13293,22 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.-AlexNet">2. AlexNet<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#2.-AlexNet">¶</a></h3><p>In this model we used "SGD" optimizer (lr=0.0001, momentum=0.9), and used each of the four datasets separately to train and test the model.</p>
-<h5 id="Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-SGD.ipynb">Model Training Code: <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-SGD.ipynb">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-SGD.ipynb</a><a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-SGD.ipynb">¶</a></h5>
+<h3 id="2.-AlexNet">2. AlexNet<a class="anchor-link" href="#2.-AlexNet">&#182;</a></h3><p>In this model we used "SGD" optimizer (lr=0.0001, momentum=0.9), and used each of the four datasets separately to train and test the model.</p>
+<h5 id="Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-SGD.ipynb">Model Training Code: <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-SGD.ipynb">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-SGD.ipynb</a><a class="anchor-link" href="#Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-SGD.ipynb">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2.1.-The-Standard-AlexNet-Model-With-Dataset-1">2.1. The Standard AlexNet Model With Dataset 1<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#2.1.-The-Standard-AlexNet-Model-With-Dataset-1">¶</a></h4>
+<h4 id="2.1.-The-Standard-AlexNet-Model-With-Dataset-1">2.1. The Standard AlexNet Model With Dataset 1<a class="anchor-link" href="#2.1.-The-Standard-AlexNet-Model-With-Dataset-1">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet_SGD_ds_1.png" alt="image"></p>
+<p><img src="./AlexNet/AlexNet_SGD_ds_1.png" alt="image"></p>
 
 </div>
 </div>
@@ -13433,14 +13328,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2.2.-The-Standard-AlexNet-Model-With-Dataset-2">2.2. The Standard AlexNet Model With Dataset 2<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#2.2.-The-Standard-AlexNet-Model-With-Dataset-2">¶</a></h4>
+<h4 id="2.2.-The-Standard-AlexNet-Model-With-Dataset-2">2.2. The Standard AlexNet Model With Dataset 2<a class="anchor-link" href="#2.2.-The-Standard-AlexNet-Model-With-Dataset-2">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet_SGD_ds_2.png" alt="image"></p>
+<p><img src="./AlexNet/AlexNet_SGD_ds_2.png" alt="image"></p>
 
 </div>
 </div>
@@ -13460,14 +13355,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2.3.-The-Standard-AlexNet-Model-With-Dataset-3">2.3. The Standard AlexNet Model With Dataset 3<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#2.3.-The-Standard-AlexNet-Model-With-Dataset-3">¶</a></h4>
+<h4 id="2.3.-The-Standard-AlexNet-Model-With-Dataset-3">2.3. The Standard AlexNet Model With Dataset 3<a class="anchor-link" href="#2.3.-The-Standard-AlexNet-Model-With-Dataset-3">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet_SGD_ds_3.png" alt="image"></p>
+<p><img src="./AlexNet/AlexNet_SGD_ds_3.png" alt="image"></p>
 
 </div>
 </div>
@@ -13487,7 +13382,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2.4.-The-Standard-AlexNet-Model-With-Dataset-4">2.4. The Standard AlexNet Model With Dataset 4<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#2.4.-The-Standard-AlexNet-Model-With-Dataset-4">¶</a></h4><p>With this dataset, data augmentation was used.</p>
+<h4 id="2.4.-The-Standard-AlexNet-Model-With-Dataset-4">2.4. The Standard AlexNet Model With Dataset 4<a class="anchor-link" href="#2.4.-The-Standard-AlexNet-Model-With-Dataset-4">&#182;</a></h4><p>With this dataset, data augmentation was used.</p>
 
 </div>
 </div>
@@ -13495,7 +13390,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet_SGD_ds_4.png" alt="image"></p>
+<p><img src="./AlexNet/AlexNet_SGD_ds_4.png" alt="image"></p>
 
 </div>
 </div>
@@ -13514,8 +13409,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="observation:">observation:<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#observation:">¶</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SGD" optimizer (lr=0.0001, momentum=0.9) has improved AlexNet's performance, but no satisfactory results yet except for dataset 4 (X-ray).</p>
-<hr>
+<h3 id="observation:">observation:<a class="anchor-link" href="#observation:">&#182;</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SGD" optimizer (lr=0.0001, momentum=0.9) has improved AlexNet's performance, but no satisfactory results yet except for dataset 4 (X-ray).</p>
 
 </div>
 </div>
@@ -13523,15 +13417,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.-Customized-AlexNet">3. Customized AlexNet<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#3.-Customized-AlexNet">¶</a></h3><p>In this model we used "SGD" optimizer (lr=0.0001, momentum=0.9), and used each of the four datasets separately to train and test the model.</p>
-<h6 id="Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-Customized.ipynb">Model Training Code: <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-Customized.ipynb">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-Customized.ipynb</a><a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-Customized.ipynb">¶</a></h6>
+<h3 id="3.-Customized-AlexNet">3. Customized AlexNet<a class="anchor-link" href="#3.-Customized-AlexNet">&#182;</a></h3><p>In this model we used "SGD" optimizer (lr=0.0001, momentum=0.9), and used each of the four datasets separately to train and test the model.</p>
+<h6 id="Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-Customized.ipynb">Model Training Code: <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-Customized.ipynb">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-Customized.ipynb</a><a class="anchor-link" href="#Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-Customized.ipynb">&#182;</a></h6>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Customization">Customization<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Customization">¶</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here, a normalization layer was added at the input of the model, nine Batch Normalization layers were added to each layer, and three Dropout layers of rate 0.4 were added to the three fully connected layers.</p>
+<h3 id="Customization">Customization<a class="anchor-link" href="#Customization">&#182;</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here, a normalization layer was added at the input of the model, nine Batch Normalization layers were added to each layer, and three Dropout layers of rate 0.4 were added to the three fully connected layers.</p>
 
 </div>
 </div>
@@ -13539,14 +13433,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3.1.-The-Customized-AlexNet-Model-With-Dataset-1">3.1. The Customized AlexNet Model With Dataset 1<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#3.1.-The-Customized-AlexNet-Model-With-Dataset-1">¶</a></h4>
+<h4 id="3.1.-The-Customized-AlexNet-Model-With-Dataset-1">3.1. The Customized AlexNet Model With Dataset 1<a class="anchor-link" href="#3.1.-The-Customized-AlexNet-Model-With-Dataset-1">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet_cust_ds_1.png" alt="image"></p>
+<p><img src="./AlexNet/AlexNet_cust_ds_1.png" alt="image"></p>
 
 </div>
 </div>
@@ -13566,14 +13460,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3.2.-The-Customized-AlexNet-Model-With-Dataset-2">3.2. The Customized AlexNet Model With Dataset 2<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#3.2.-The-Customized-AlexNet-Model-With-Dataset-2">¶</a></h4>
+<h4 id="3.2.-The-Customized-AlexNet-Model-With-Dataset-2">3.2. The Customized AlexNet Model With Dataset 2<a class="anchor-link" href="#3.2.-The-Customized-AlexNet-Model-With-Dataset-2">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet_cust_ds_2.png" alt="image"></p>
+<p><img src="./AlexNet/AlexNet_cust_ds_2.png" alt="image"></p>
 
 </div>
 </div>
@@ -13593,14 +13487,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3.3.-The-Customized-AlexNet-Model-With-Dataset-3">3.3. The Customized AlexNet Model With Dataset 3<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#3.3.-The-Customized-AlexNet-Model-With-Dataset-3">¶</a></h4>
+<h4 id="3.3.-The-Customized-AlexNet-Model-With-Dataset-3">3.3. The Customized AlexNet Model With Dataset 3<a class="anchor-link" href="#3.3.-The-Customized-AlexNet-Model-With-Dataset-3">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet_cust_ds_3.png" alt="image"></p>
+<p><img src="./AlexNet/AlexNet_cust_ds_3.png" alt="image"></p>
 
 </div>
 </div>
@@ -13620,7 +13514,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3.4.-The-Customized-AlexNet-Model-With-Dataset-4">3.4. The Customized AlexNet Model With Dataset 4<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#3.4.-The-Customized-AlexNet-Model-With-Dataset-4">¶</a></h4><p>With this dataset, data augmentation was used.</p>
+<h4 id="3.4.-The-Customized-AlexNet-Model-With-Dataset-4">3.4. The Customized AlexNet Model With Dataset 4<a class="anchor-link" href="#3.4.-The-Customized-AlexNet-Model-With-Dataset-4">&#182;</a></h4><p>With this dataset, data augmentation was used.</p>
 
 </div>
 </div>
@@ -13628,7 +13522,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/AlexNet_cust_ds_4.png" alt="image"></p>
+<p><img src="./AlexNet/AlexNet_cust_ds_4.png" alt="image"></p>
 
 </div>
 </div>
@@ -13647,8 +13541,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="observation:">observation:<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#observation:">¶</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This customization showed better results for datasets 2 and 3, while showed worst results for dataset 4 (X-ray). Nevertheless, the results for dataset 1 stayed nearly the same.</p>
-<hr>
+<h3 id="observation:">observation:<a class="anchor-link" href="#observation:">&#182;</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This customization showed better results for datasets 2 and 3, while showed worst results for dataset 4 (X-ray). Nevertheless, the results for dataset 1 stayed nearly the same.</p>
 
 </div>
 </div>
@@ -13656,35 +13549,35 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Conculosions-on-AlexNet-and-on-datasets">Conculosions on AlexNet and on datasets<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Conculosions-on-AlexNet-and-on-datasets">¶</a></h3><ul>
+<h3 id="Conculosions-on-AlexNet-and-on-datasets">Conculosions on AlexNet and on datasets<a class="anchor-link" href="#Conculosions-on-AlexNet-and-on-datasets">&#182;</a></h3><ul>
     <li>Dataset 1 is not good enough for AlexNet's model.</li>
     <li>The Customized model demonestrated the best results.</li>
     <li>"SGD" optimizer works beter than "Adam" optimmizer for all the datasets</li>
     <li>A low learning is needed for the "SGD" optimizer (a learning rate of 0.0001 was used)</li>
 </ul><hr>
-<h4 id="Please-note-that-from-now-on-dataset-4-will-be-Ignored-as-it-is-verey-small-(only-284-images),-and-it-has-showed-relatively-satisfactory-results-with-the-AlexNet-model-with-&quot;SGD&quot;-optimizer.">Please note that from now on dataset 4 will be Ignored as it is verey small (only 284 images), and it has showed relatively satisfactory results with the AlexNet model with "SGD" optimizer.<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Please-note-that-from-now-on-dataset-4-will-be-Ignored-as-it-is-verey-small-(only-284-images),-and-it-has-showed-relatively-satisfactory-results-with-the-AlexNet-model-with-%22SGD%22-optimizer.">¶</a></h4>
+<h4 id="Please-note-that-from-now-on-dataset-4-will-be-Ignored-as-it-is-verey-small-(only-284-images),-and-it-has-showed-relatively-satisfactory-results-with-the-AlexNet-model-with-&quot;SGD&quot;-optimizer.">Please note that from now on dataset 4 will be Ignored as it is verey small (only 284 images), and it has showed relatively satisfactory results with the AlexNet model with "SGD" optimizer.<a class="anchor-link" href="#Please-note-that-from-now-on-dataset-4-will-be-Ignored-as-it-is-verey-small-(only-284-images),-and-it-has-showed-relatively-satisfactory-results-with-the-AlexNet-model-with-&quot;SGD&quot;-optimizer.">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.-ResNet-50">4. ResNet 50<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#4.-ResNet-50">¶</a></h3><p>In this model we used "SGD" optimizer (lr=0.0001, momentum=0.9), and used the three CT datasets separately to train and test the model.</p>
-<h6 id="Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_50/ResNet%2050.ipynb">Model Training Code: <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_50/ResNet%2050.ipynb">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_50/ResNet%2050.ipynb</a><a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_50/ResNet%2050.ipynb">¶</a></h6>
+<h3 id="4.-ResNet-50">4. ResNet 50<a class="anchor-link" href="#4.-ResNet-50">&#182;</a></h3><p>In this model we used "SGD" optimizer (lr=0.0001, momentum=0.9), and used the three CT datasets separately to train and test the model.</p>
+<h6 id="Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_50/ResNet%2050.ipynb">Model Training Code: <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_50/ResNet%2050.ipynb">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_50/ResNet%2050.ipynb</a><a class="anchor-link" href="#Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_50/ResNet%2050.ipynb">&#182;</a></h6>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4.1.-The-ResNet-50-Model-With-Dataset-1">4.1. The ResNet 50 Model With Dataset 1<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#4.1.-The-ResNet-50-Model-With-Dataset-1">¶</a></h4>
+<h4 id="4.1.-The-ResNet-50-Model-With-Dataset-1">4.1. The ResNet 50 Model With Dataset 1<a class="anchor-link" href="#4.1.-The-ResNet-50-Model-With-Dataset-1">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/Resnet_50_ds_1.png" alt="image"></p>
+<p><img src="./ResNet_50/Resnet_50_ds_1.png" alt="image"></p>
 
 </div>
 </div>
@@ -13704,14 +13597,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4.2.-The-ResNet-50-Model-With-Dataset-2">4.2. The ResNet 50 Model With Dataset 2<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#4.2.-The-ResNet-50-Model-With-Dataset-2">¶</a></h4>
+<h4 id="4.2.-The-ResNet-50-Model-With-Dataset-2">4.2. The ResNet 50 Model With Dataset 2<a class="anchor-link" href="#4.2.-The-ResNet-50-Model-With-Dataset-2">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/Resnet_50_ds_2.png" alt="image"></p>
+<p><img src="./ResNet_50/Resnet_50_ds_2.png" alt="image"></p>
 
 </div>
 </div>
@@ -13731,14 +13624,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4.3.-The-ResNet-50-Model-With-Dataset-3">4.3. The ResNet 50 Model With Dataset 3<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#4.3.-The-ResNet-50-Model-With-Dataset-3">¶</a></h4>
+<h4 id="4.3.-The-ResNet-50-Model-With-Dataset-3">4.3. The ResNet 50 Model With Dataset 3<a class="anchor-link" href="#4.3.-The-ResNet-50-Model-With-Dataset-3">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/Resnet_50_ds_3.png" alt="image"></p>
+<p><img src="./ResNet_50/Resnet_50_ds_3.png" alt="image"></p>
 
 </div>
 </div>
@@ -13758,7 +13651,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="observation:">observation:<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#observation:">¶</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ResNet 50 improved the results on dataset 1, while showed nearly similar results to the customized AlexNet model.</p>
+<h3 id="observation:">observation:<a class="anchor-link" href="#observation:">&#182;</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ResNet 50 improved the results on dataset 1, while showed nearly similar results to the customized AlexNet model.</p>
 <hr>
 
 </div>
@@ -13767,22 +13660,22 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="5.-ResNet-101">5. ResNet 101<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#5.-ResNet-101">¶</a></h3><p>In this model we used "SGD" optimizer (lr=0.0001, momentum=0.9), and used the three CT datasets separately to train and test the model.</p>
-<h6 id="Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_101/ResNet%20101.ipynb">Model Training Code: <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_101/ResNet%20101.ipynb">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_101/ResNet%20101.ipynb</a><a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_101/ResNet%20101.ipynb">¶</a></h6>
+<h3 id="5.-ResNet-101">5. ResNet 101<a class="anchor-link" href="#5.-ResNet-101">&#182;</a></h3><p>In this model we used "SGD" optimizer (lr=0.0001, momentum=0.9), and used the three CT datasets separately to train and test the model.</p>
+<h6 id="Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_101/ResNet%20101.ipynb">Model Training Code: <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_101/ResNet%20101.ipynb">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_101/ResNet%20101.ipynb</a><a class="anchor-link" href="#Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_101/ResNet%20101.ipynb">&#182;</a></h6>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="5.1.-The-ResNet-101-Model-With-Dataset-1">5.1. The ResNet 101 Model With Dataset 1<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#5.1.-The-ResNet-101-Model-With-Dataset-1">¶</a></h4>
+<h4 id="5.1.-The-ResNet-101-Model-With-Dataset-1">5.1. The ResNet 101 Model With Dataset 1<a class="anchor-link" href="#5.1.-The-ResNet-101-Model-With-Dataset-1">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/Resnet_101_ds_1.png" alt="image"></p>
+<p><img src="./ResNet_101/Resnet_101_ds_1.png" alt="image"></p>
 
 </div>
 </div>
@@ -13802,14 +13695,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="5.2.-The-ResNet-101-Model-With-Dataset-2">5.2. The ResNet 101 Model With Dataset 2<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#5.2.-The-ResNet-101-Model-With-Dataset-2">¶</a></h4>
+<h4 id="5.2.-The-ResNet-101-Model-With-Dataset-2">5.2. The ResNet 101 Model With Dataset 2<a class="anchor-link" href="#5.2.-The-ResNet-101-Model-With-Dataset-2">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/Resnet_101_ds_2.png" alt="image"></p>
+<p><img src="./ResNet_101/Resnet_101_ds_2.png" alt="image"></p>
 
 </div>
 </div>
@@ -13829,14 +13722,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="5.3.-The-ResNet-101-Model-With-Dataset-3">5.3. The ResNet 101 Model With Dataset 3<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#5.3.-The-ResNet-101-Model-With-Dataset-3">¶</a></h4>
+<h4 id="5.3.-The-ResNet-101-Model-With-Dataset-3">5.3. The ResNet 101 Model With Dataset 3<a class="anchor-link" href="#5.3.-The-ResNet-101-Model-With-Dataset-3">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./Covid-19 Detection With Deep Learning_files/Resnet_101_ds_3.png" alt="image"></p>
+<p><img src="./ResNet_101/Resnet_101_ds_3.png" alt="image"></p>
 
 </div>
 </div>
@@ -13856,8 +13749,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="observation:">observation:<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#observation:">¶</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ResNet 101 showed nearly similar results to ResNet 50.</p>
-<hr>
+<h3 id="observation:">observation:<a class="anchor-link" href="#observation:">&#182;</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ResNet 101 showed nearly similar results to ResNet 50.</p>
 
 </div>
 </div>
@@ -13865,7 +13757,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="ResNet-101-Testing">ResNet 101 Testing<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#ResNet-101-Testing">¶</a></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now since ResNet 101 and ResNet 50 demonestrated the best results, we will take ResNet model through further testing with the different CT datasets.</p>
+<h2 id="ResNet-101-Testing">ResNet 101 Testing<a class="anchor-link" href="#ResNet-101-Testing">&#182;</a></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now since ResNet 101 and ResNet 50 demonestrated the best results, we will take ResNet model through further testing with the different CT datasets.</p>
 
 </div>
 </div>
@@ -13886,22 +13778,22 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 
 <span class="c1"># Import Dataset 1</span>
-<span class="n">ds_1_CT</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">image_dataset_from_directory</span><span class="p">(</span><span class="sa">r</span><span class="s1">'./dataset_1_CT'</span><span class="p">,</span>
+<span class="n">ds_1_CT</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">image_dataset_from_directory</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;./dataset_1_CT&#39;</span><span class="p">,</span>
                                                               <span class="n">image_size</span><span class="o">=</span><span class="p">(</span><span class="mi">227</span><span class="p">,</span> <span class="mi">227</span><span class="p">),</span>
                                                               <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
-                                                              <span class="n">label_mode</span><span class="o">=</span><span class="s1">'categorical'</span><span class="p">)</span>
+                                                              <span class="n">label_mode</span><span class="o">=</span><span class="s1">&#39;categorical&#39;</span><span class="p">)</span>
 
 <span class="c1"># Import Dataset 2</span>
-<span class="n">ds_2_CT</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">image_dataset_from_directory</span><span class="p">(</span><span class="sa">r</span><span class="s1">'./dataset_2_CT'</span><span class="p">,</span>
+<span class="n">ds_2_CT</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">image_dataset_from_directory</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;./dataset_2_CT&#39;</span><span class="p">,</span>
                                                               <span class="n">image_size</span><span class="o">=</span><span class="p">(</span><span class="mi">227</span><span class="p">,</span> <span class="mi">227</span><span class="p">),</span>
                                                               <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
-                                                              <span class="n">label_mode</span><span class="o">=</span><span class="s1">'categorical'</span><span class="p">)</span>
+                                                              <span class="n">label_mode</span><span class="o">=</span><span class="s1">&#39;categorical&#39;</span><span class="p">)</span>
 
 <span class="c1"># Import Dataset 3</span>
-<span class="n">ds_3_CT</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">image_dataset_from_directory</span><span class="p">(</span><span class="sa">r</span><span class="s1">'./dataset_3_CT'</span><span class="p">,</span>
+<span class="n">ds_3_CT</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">image_dataset_from_directory</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;./dataset_3_CT&#39;</span><span class="p">,</span>
                                                               <span class="n">image_size</span><span class="o">=</span><span class="p">(</span><span class="mi">227</span><span class="p">,</span> <span class="mi">227</span><span class="p">),</span>
                                                               <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
-                                                              <span class="n">label_mode</span><span class="o">=</span><span class="s1">'categorical'</span><span class="p">)</span>
+                                                              <span class="n">label_mode</span><span class="o">=</span><span class="s1">&#39;categorical&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13932,7 +13824,7 @@ Found 2481 files belonging to 2 classes.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color="green">Then we load the models of ResNet trained by the three CT datasets and test them.</font></p>
+<p><font color=green>Then we load the models of ResNet trained by the three CT datasets and test them.</font></p>
 
 </div>
 </div>
@@ -13940,7 +13832,7 @@ Found 2481 files belonging to 2 classes.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1.-Evaluate-ResNet-101-trained-by-dataset-1">1. Evaluate ResNet 101 trained by dataset 1<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#1.-Evaluate-ResNet-101-trained-by-dataset-1">¶</a></h4>
+<h4 id="1.-Evaluate-ResNet-101-trained-by-dataset-1">1. Evaluate ResNet 101 trained by dataset 1<a class="anchor-link" href="#1.-Evaluate-ResNet-101-trained-by-dataset-1">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13950,7 +13842,7 @@ Found 2481 files belonging to 2 classes.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load ResNet model trained by dataset 1</span>
-<span class="n">Resnet_101_ds1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">'../Resnet_101/Resnet_101_dataset_1'</span><span class="p">)</span>
+<span class="n">Resnet_101_ds1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;../Resnet_101/Resnet_101_dataset_1&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13965,7 +13857,7 @@ Found 2481 files belonging to 2 classes.
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 1</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Resnet_101_ds1</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_1_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'ResNet 101 of dataset 1 against dataset 1, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ResNet 101 of dataset 1 against dataset 1, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13999,7 +13891,7 @@ ResNet 101 of dataset 1 against dataset 1, accuracy: 87.27%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 2</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Resnet_101_ds1</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_2_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'ResNet 101 of dataset 1 against dataset 2, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ResNet 101 of dataset 1 against dataset 2, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14033,7 +13925,7 @@ ResNet 101 of dataset 1 against dataset 2, accuracy: 87.16%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 3</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Resnet_101_ds1</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_3_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'ResNet 101 of dataset 1 against dataset 3, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ResNet 101 of dataset 1 against dataset 3, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14063,7 +13955,7 @@ ResNet 101 of dataset 1 against dataset 3, accuracy: 51.87%
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2.-Evaluate-ResNet-101-trained-by-dataset-2">2. Evaluate ResNet 101 trained by dataset 2<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#2.-Evaluate-ResNet-101-trained-by-dataset-2">¶</a></h4>
+<h4 id="2.-Evaluate-ResNet-101-trained-by-dataset-2">2. Evaluate ResNet 101 trained by dataset 2<a class="anchor-link" href="#2.-Evaluate-ResNet-101-trained-by-dataset-2">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -14073,7 +13965,7 @@ ResNet 101 of dataset 1 against dataset 3, accuracy: 51.87%
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load ResNet model trained by dataset 2</span>
-<span class="n">Resnet_101_ds2</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">'../Resnet_101/Resnet_101_dataset_2'</span><span class="p">)</span>
+<span class="n">Resnet_101_ds2</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;../Resnet_101/Resnet_101_dataset_2&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14088,7 +13980,7 @@ ResNet 101 of dataset 1 against dataset 3, accuracy: 51.87%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 1</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Resnet_101_ds2</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_1_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'ResNet 101 of dataset 2 against dataset 1, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ResNet 101 of dataset 2 against dataset 1, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14122,7 +14014,7 @@ ResNet 101 of dataset 2 against dataset 1, accuracy: 89.54%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 2</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Resnet_101_ds2</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_2_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'ResNet 101 of dataset 2 against dataset 2, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ResNet 101 of dataset 2 against dataset 2, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14156,7 +14048,7 @@ ResNet 101 of dataset 2 against dataset 2, accuracy: 95.64%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 3</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Resnet_101_ds2</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_3_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'ResNet 101 of dataset 2 against dataset 3, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ResNet 101 of dataset 2 against dataset 3, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14186,7 +14078,7 @@ ResNet 101 of dataset 2 against dataset 3, accuracy: 49.01%
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3.-Evaluate-ResNet-101-trained-by-dataset-3">3. Evaluate ResNet 101 trained by dataset 3<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#3.-Evaluate-ResNet-101-trained-by-dataset-3">¶</a></h4>
+<h4 id="3.-Evaluate-ResNet-101-trained-by-dataset-3">3. Evaluate ResNet 101 trained by dataset 3<a class="anchor-link" href="#3.-Evaluate-ResNet-101-trained-by-dataset-3">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -14196,7 +14088,7 @@ ResNet 101 of dataset 2 against dataset 3, accuracy: 49.01%
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load ResNet model trained by dataset 3</span>
-<span class="n">Resnet_101_ds3</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">'../Resnet_101/Resnet_101_dataset_3'</span><span class="p">)</span>
+<span class="n">Resnet_101_ds3</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;../Resnet_101/Resnet_101_dataset_3&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14211,7 +14103,7 @@ ResNet 101 of dataset 2 against dataset 3, accuracy: 49.01%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 1</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Resnet_101_ds3</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_1_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'ResNet 101 of dataset 3 against dataset 1, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ResNet 101 of dataset 3 against dataset 1, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14245,7 +14137,7 @@ ResNet 101 of dataset 3 against dataset 1, accuracy: 58.45%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 2</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Resnet_101_ds3</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_2_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'ResNet 101 of dataset 3 against dataset 2, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ResNet 101 of dataset 3 against dataset 2, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14279,7 +14171,7 @@ ResNet 101 of dataset 3 against dataset 2, accuracy: 65.59%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 3</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Resnet_101_ds3</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_3_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'ResNet 101 of dataset 3 against dataset 3, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ResNet 101 of dataset 3 against dataset 3, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14309,7 +14201,7 @@ ResNet 101 of dataset 3 against dataset 3, accuracy: 95.32%
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Customized-ALexNet-Testing">Customized ALexNet Testing<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Customized-ALexNet-Testing">¶</a></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now since AlexNet demonestrated approximately equal results to the results of ResNet 101 and Resnet 50, when using datasets 2 and 3, we will have further testing on those models with the different CT datasets.</p>
+<h2 id="Customized-ALexNet-Testing">Customized ALexNet Testing<a class="anchor-link" href="#Customized-ALexNet-Testing">&#182;</a></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now since AlexNet demonestrated approximately equal results to the results of ResNet 101 and Resnet 50, when using datasets 2 and 3, we will have further testing on those models with the different CT datasets.</p>
 
 </div>
 </div>
@@ -14317,7 +14209,7 @@ ResNet 101 of dataset 3 against dataset 3, accuracy: 95.32%
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color="green">Then we load the models of Customized AlexNet trained by the CT datasets 1 and 2 and test them.</font></p>
+<p><font color=green>Then we load the models of Customized AlexNet trained by the CT datasets 1 and 2 and test them.</font></p>
 
 </div>
 </div>
@@ -14325,7 +14217,7 @@ ResNet 101 of dataset 3 against dataset 3, accuracy: 95.32%
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1.-Evaluate-Customized-AlexNet-trained-by-dataset-2">1. Evaluate Customized AlexNet trained by dataset 2<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#1.-Evaluate-Customized-AlexNet-trained-by-dataset-2">¶</a></h4>
+<h4 id="1.-Evaluate-Customized-AlexNet-trained-by-dataset-2">1. Evaluate Customized AlexNet trained by dataset 2<a class="anchor-link" href="#1.-Evaluate-Customized-AlexNet-trained-by-dataset-2">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -14335,7 +14227,7 @@ ResNet 101 of dataset 3 against dataset 3, accuracy: 95.32%
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load Customized AlexNet model trained by dataset 2</span>
-<span class="n">Cust_AlexNet_ds2</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">'../AlexNet/AlexNet_cust_dataset_2'</span><span class="p">)</span>
+<span class="n">Cust_AlexNet_ds2</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;../AlexNet/AlexNet_cust_dataset_2&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14350,7 +14242,7 @@ ResNet 101 of dataset 3 against dataset 3, accuracy: 95.32%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 1</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Cust_AlexNet_ds2</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_1_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Customized AlexNet of dataset 2 against dataset 1, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Customized AlexNet of dataset 2 against dataset 1, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14384,7 +14276,7 @@ Customized AlexNet of dataset 2 against dataset 1, accuracy: 92.76%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 2</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Cust_AlexNet_ds2</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_2_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Customized AlexNet of dataset 2 against dataset 2, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Customized AlexNet of dataset 2 against dataset 2, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14418,7 +14310,7 @@ Customized AlexNet of dataset 2 against dataset 2, accuracy: 97.63%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 3</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Cust_AlexNet_ds2</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_3_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Customized AlexNet of dataset 2 against dataset 3, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Customized AlexNet of dataset 2 against dataset 3, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14448,7 +14340,7 @@ Customized AlexNet of dataset 2 against dataset 3, accuracy: 44.58%
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2.-Evaluate-Customized-AlexNet-trained-by-dataset-3">2. Evaluate Customized AlexNet trained by dataset 3<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#2.-Evaluate-Customized-AlexNet-trained-by-dataset-3">¶</a></h4>
+<h4 id="2.-Evaluate-Customized-AlexNet-trained-by-dataset-3">2. Evaluate Customized AlexNet trained by dataset 3<a class="anchor-link" href="#2.-Evaluate-Customized-AlexNet-trained-by-dataset-3">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -14458,7 +14350,7 @@ Customized AlexNet of dataset 2 against dataset 3, accuracy: 44.58%
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load Customized AlexNet model trained by dataset 3</span>
-<span class="n">Cust_AlexNet_ds3</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">'../AlexNet/AlexNet_cust_dataset_3'</span><span class="p">)</span>
+<span class="n">Cust_AlexNet_ds3</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;../AlexNet/AlexNet_cust_dataset_3&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14473,7 +14365,7 @@ Customized AlexNet of dataset 2 against dataset 3, accuracy: 44.58%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 1</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Cust_AlexNet_ds3</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_1_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Customized AlexNet of dataset 3 against dataset 1, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Customized AlexNet of dataset 3 against dataset 1, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14507,7 +14399,7 @@ Customized AlexNet of dataset 3 against dataset 1, accuracy: 55.63%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 2</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Cust_AlexNet_ds3</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_2_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Customized AlexNet of dataset 3 against dataset 2, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Customized AlexNet of dataset 3 against dataset 2, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14541,7 +14433,7 @@ Customized AlexNet of dataset 3 against dataset 2, accuracy: 61.85%
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Evaluate against dataset 3</span>
 <span class="n">loss</span><span class="p">,</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">Cust_AlexNet_ds3</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">ds_3_CT</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Customized AlexNet of dataset 3 against dataset 3, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Customized AlexNet of dataset 3 against dataset 3, accuracy: </span><span class="si">{:5.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">acc</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14571,7 +14463,7 @@ Customized AlexNet of dataset 3 against dataset 3, accuracy: 98.51%
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Observations">Observations<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Observations">¶</a></h2><ul>
+<h2 id="Observations">Observations<a class="anchor-link" href="#Observations">&#182;</a></h2><ul>
     <li>Testing those two models of Customized AlexNet trained by datasets 1 and 2, demonestrated beter results than the ResNet 101 model trained by the same datasets.</li>
     <li>The conflict between the datasets 1 and 2 and dataset 3 is still the same by this model.</li>
 </ul>
@@ -14581,10 +14473,10 @@ Customized AlexNet of dataset 3 against dataset 3, accuracy: 98.51%
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conclusion">Conclusion<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Conclusion">¶</a></h2><p></p><ul>
-    <li>Customized AlexNet Trained by either dataset 2 or 3, gives the best results among (Standard AlexNet, ResNet50 and ResNet 101)<p></p>
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><p><ul>
+    <li>Customized AlexNet Trained by either dataset 2 or 3, gives the best results among (Standard AlexNet, ResNet50 and ResNet 101)</p>
 <ul>
-</ul></li></ul></div>
+</div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -14598,27 +14490,27 @@ Customized AlexNet of dataset 3 against dataset 3, accuracy: 98.51%
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Summary">Summary<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Summary">¶</a></h1>
+<h1 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p><ul>
+<p><ul>
     <li>Dataset 4 (X-ray) is quite small and not good enough for training.</li>
     <li>AlexNet works beter with "SGD" optimizer rather than "Adam" optimizer.</li>
     <li> Customizing AlexNet by normalizing the input, adding batch normalization, and dropout layer helped in improving the results</li>
     <li>Even though the Customized AlexNet is much simpler and has much more less learning time than both the ResNet 50 and the ResNet 101, it still demonestrated beter results for detecting Covid-19.</li>
-    <li>A conflict appears between datasets 1 and 2 and dataset 3. Nevertheless, it is quite plausible to mix all the data and observe the results when training Customized AlexNet and ResNet 101.</li><p></p>
+    <li>A conflict appears between datasets 1 and 2 and dataset 3. Nevertheless, it is quite plausible to mix all the data and observe the results when training Customized AlexNet and ResNet 101.</li></p>
 <ul>
-</ul></ul></div>
+</div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Accuracies-of-Customized-AlexNet-vs-ResNet-101-(When-Trained-By-Dataset-2)">Accuracies of Customized AlexNet vs ResNet 101 (When Trained By Dataset 2)<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Accuracies-of-Customized-AlexNet-vs-ResNet-101-(When-Trained-By-Dataset-2)">¶</a></h3>
+<h3 id="Accuracies-of-Customized-AlexNet-vs-ResNet-101-(When-Trained-By-Dataset-2)">Accuracies of Customized AlexNet vs ResNet 101 (When Trained By Dataset 2)<a class="anchor-link" href="#Accuracies-of-Customized-AlexNet-vs-ResNet-101-(When-Trained-By-Dataset-2)">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14626,7 +14518,7 @@ Customized AlexNet of dataset 3 against dataset 3, accuracy: 98.51%
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <table style="width:100%">    
-    <tbody><tr>
+    <tr>
         <th></th>
         <th><center>Customized AlexNet</center></th>
         <th><center>ResNet 101</center></th>
@@ -14656,14 +14548,14 @@ Customized AlexNet of dataset 3 against dataset 3, accuracy: 98.51%
         <td><center>44.58%</center></td>
         <td><center>49.01%</center></td>
     </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Accuracies-of-Customized-AlexNet-vs-ResNet-101-(When-Trained-By-Dataset-3)">Accuracies of Customized AlexNet vs ResNet 101 (When Trained By Dataset 3)<a class="anchor-link" href="file:///C:/Users/15014/Desktop/NTI_IOT_and_AI_Notebooks/project/Covid-19%20Detection%20With%20Deep%20Learning.html#Accuracies-of-Customized-AlexNet-vs-ResNet-101-(When-Trained-By-Dataset-3)">¶</a></h3>
+<h3 id="Accuracies-of-Customized-AlexNet-vs-ResNet-101-(When-Trained-By-Dataset-3)">Accuracies of Customized AlexNet vs ResNet 101 (When Trained By Dataset 3)<a class="anchor-link" href="#Accuracies-of-Customized-AlexNet-vs-ResNet-101-(When-Trained-By-Dataset-3)">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14671,7 +14563,7 @@ Customized AlexNet of dataset 3 against dataset 3, accuracy: 98.51%
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <table style="width:100%">    
-    <tbody><tr>
+    <tr>
         <th></th>
         <th><center>Customized AlexNet</center></th>
         <th><center>ResNet 101</center></th>
@@ -14701,16 +14593,96 @@ Customized AlexNet of dataset 3 against dataset 3, accuracy: 98.51%
         <td><center>98.51%</center></td>
         <td><center>95.32%</center></td>
     </tr>
-</tbody></table>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h1><font color=red>Update</font></h1>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ResNet-101-and-Customized-AlexNet-Results-with-mixed-datasets">ResNet 101 and Customized AlexNet Results with mixed datasets<a class="anchor-link" href="#ResNet-101-and-Customized-AlexNet-Results-with-mixed-datasets">&#182;</a></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now we have mixed the all three CT datasets (1, 2, and 3), and trained our best two models with them.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.-Customized-AlexNet">1. Customized AlexNet<a class="anchor-link" href="#1.-Customized-AlexNet">&#182;</a></h3><p>In this model we used "SGD" optimizer (lr=0.0001, momentum=0.9), and the three CT datasets mixed together to train and test the model (90% training and validation, 10% Testing).</p>
+<h6 id="Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-CT-mix.ipynb">Model Training Code: <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-CT-mix.ipynb">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-CT-mix.ipynb</a><a class="anchor-link" href="#Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/AlexNet/AlexNet-CT-mix.ipynb">&#182;</a></h6>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./AlexNet/AlexNet_CT_mix.png" alt="image"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After 50 epochs:</p>
+<ul>
+  <li>Training Accuracy = 0.9864</li>
+  <li>Validation Accuracy = 0.9380</li>
+  <li>Testing Accuracy = 0.8967</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.-ResNet-101">1. ResNet 101<a class="anchor-link" href="#1.-ResNet-101">&#182;</a></h3><p>In this model we used "SGD" optimizer (lr=0.0001, momentum=0.9), and the three CT datasets mixed together to train and test the model (90% training and validation, 10% Testing).</p>
+<h6 id="Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_101/ResNet-101-CT-mix.ipynb">Model Training Code: <a href="https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_101/ResNet-101-CT-mix.ipynb">https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_101/ResNet-101-CT-mix.ipynb</a><a class="anchor-link" href="#Model-Training-Code:-https://github.com/Mostafa-Farghly/Covid-19-Detection-With-Deep-Learning/blob/main/ResNet_101/ResNet-101-CT-mix.ipynb">&#182;</a></h6>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./ResNet_101/Resnet_101_ct_mix.png" alt="image"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After 50 epochs:</p>
+<ul>
+  <li>Training Accuracy = 0.9347</li>
+  <li>Validation Accuracy = 0.8597</li>
+  <li>Testing Accuracy = 0.8487</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Opservation:">Opservation:<a class="anchor-link" href="#Opservation:">&#182;</a></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Agian, the customized AlexNet model outperforms the ResNet 101 model.</p>
+
 </div>
 </div>
 </div>
     </div>
   </div>
-
+</body>
 
  
 
 
-
-</body></html>
+</html>
